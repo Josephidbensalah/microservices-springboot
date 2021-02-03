@@ -1,8 +1,8 @@
 server:
-  port: 9200
+  port: 9000
 spring:
-  main:
-    allow-bean-definition-overriding: true
+  application:
+    name: client-service
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: MYSQL
@@ -40,5 +40,17 @@ eureka:
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 
+---
+spring:
+  profiles: test
+  datasource: 
+        url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        username: sa
+        password: sa
+        driver-class-name: org.h2.Driver
+  jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate :
+          ddl-auto: create

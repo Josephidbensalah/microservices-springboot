@@ -1,8 +1,8 @@
 server:
   port: 9100
 spring:
-  application:
-    name: client-service
+  main:
+    allow-bean-definition-overriding: true
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: MYSQL
