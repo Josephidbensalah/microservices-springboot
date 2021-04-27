@@ -62,7 +62,7 @@ public class SwaggerConfig {
 		return new ApiInfoBuilder()
 				.title("Client Management Rest APIs")
 				.description("This page lists all the rest apis for Clients Management App.")
-				.version("1.0-SNAPSHOT").contact(new Contact("Amine BOUAGGAD", "www.omnidata.ma", "abouaggad@omnidata.ma"))
+				.version("1.0-SNAPSHOT").contact(new Contact("Joseph idbensalah", "joseph", "joseph.idbensalah@gmail.com"))
 				.build();
 	}
 	
